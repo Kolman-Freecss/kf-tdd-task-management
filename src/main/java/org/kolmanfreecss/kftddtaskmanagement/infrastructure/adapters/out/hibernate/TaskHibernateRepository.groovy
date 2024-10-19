@@ -8,16 +8,11 @@ import org.springframework.stereotype.Repository
 /**
  * TaskHibernateRepository
  * Groovy class for TaskHibernateRepository (Groovy Just for fun)
- * 
+ *
  * @author Kolman-Freecss
  * @version 1.0
  */
-@Repository("taskHibernateRepository")
-interface TaskHibernateRepository extends JpaRepository<Task, Long>, TaskRepositoryPort {
-    
-    @Override
-    default Set<Task> getAll() {
-        return super.findAll();
-    }
-    
+@Repository
+interface TaskHibernateRepository extends JpaRepository<Task, Long> {
+
 }
