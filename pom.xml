@@ -102,21 +102,21 @@
             <artifactId>spring-restdocs-mockmvc</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.34</version>
         </dependency>
-        
+
         <!-- MySQL -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
-        
+
         <!-- H2 -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -155,6 +155,7 @@
 
     <build>
         <plugins>
+            <!-- How compiles maven -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -163,6 +164,11 @@
                     <source>22</source>
                     <target>22</target>
                     <annotationProcessorPaths>
+                        <path> <!-- Important to specify the path to the lombok to process its annotations -->
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
