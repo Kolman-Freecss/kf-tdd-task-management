@@ -1,7 +1,7 @@
 package org.kolmanfreecss.kftddtaskmanagement.infrastructure.rest;
 
 import org.kolmanfreecss.kftddtaskmanagement.domain.dto.ProjectDto;
-import org.kolmanfreecss.kftddtaskmanagement.domain.service.ProjectService;
+import org.kolmanfreecss.kftddtaskmanagement.application.services.ProjectService;
 import org.kolmanfreecss.kftddtaskmanagement.infrastructure.rest.common.BaseController;
 import org.kolmanfreecss.kftddtaskmanagement.infrastructure.rest.model.ResponseWrapper;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Java implementation.
  * 
  * @author Kolman-Freecss
- * @see org.kolmanfreecss.kftddtaskmanagement.domain.service.ProjectService
+ * @see ProjectService
  * @version 1.0
  */
 @RestController()

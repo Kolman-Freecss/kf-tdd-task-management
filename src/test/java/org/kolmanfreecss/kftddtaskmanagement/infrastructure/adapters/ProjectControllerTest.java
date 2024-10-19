@@ -1,10 +1,10 @@
-package org.kolmanfreecss.kftddtaskmanagement.infrastructure.repository;
+package org.kolmanfreecss.kftddtaskmanagement.infrastructure.adapters;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.kolmanfreecss.kftddtaskmanagement.domain.dto.ProjectDto;
-import org.kolmanfreecss.kftddtaskmanagement.domain.service.ProjectService;
+import org.kolmanfreecss.kftddtaskmanagement.application.services.ProjectService;
 import org.kolmanfreecss.kftddtaskmanagement.infrastructure.rest.ProjectController;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;

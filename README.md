@@ -22,3 +22,7 @@ This project is a RESTful API built in Java that allows managing tasks and proje
 - Lombok
 - Docker
 - Docker Compose
+
+## Architecture
+
+- Hexagonal Architecture
