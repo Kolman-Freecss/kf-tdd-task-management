@@ -1,7 +1,6 @@
 package org.kolmanfreecss.kftddtaskmanagement.infrastructure.adapters.out.hibernate;
 
 import org.kolmanfreecss.kftddtaskmanagement.application.ports.ProjectRepositoryPort;
-import org.kolmanfreecss.kftddtaskmanagement.domain.dto.ProjectDto;
 import org.kolmanfreecss.kftddtaskmanagement.domain.model.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -17,9 +16,8 @@ import org.springframework.stereotype.Repository;
 public interface ProjectHibernateRepository extends JpaRepository<Project, Long>, ProjectRepositoryPort {
     
     @Override
-    default Project createProject(final ProjectDto projectDto) {
-        final Project project = new Project(projectDto.id(), projectDto.name(), projectDto.description(), projectDto.startDate(), projectDto.endDate());
-        return save(project);
+    default Project createProject(final Project entity) {
+        return save(entity);
     }
     
 }

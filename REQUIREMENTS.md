@@ -1,7 +1,9 @@
 # Task Management API
 ## Project Overview
 
-This project is a RESTful API built in Java that allows managing tasks and projects. The API will include CRUD operations (Create, Read, Update, Delete) for both entities: Task and Project. This project is developed using Test-Driven Development (TDD), where tests are written before implementing the actual functionality.
+This project is a RESTful API built in Java that allows managing tasks and projects. 
+The API will include CRUD operations (Create, Read, Update, Delete) for both entities: Task and Project. 
+This project is developed using Test-Driven Development (TDD), where tests are written before implementing the actual functionality.
 
 ## Functional Requirements
 ### Entity: Task

@@ -1,6 +1,5 @@
 package org.kolmanfreecss.kftddtaskmanagement.application.ports;
 
-import org.kolmanfreecss.kftddtaskmanagement.domain.dto.ProjectDto;
 import org.kolmanfreecss.kftddtaskmanagement.domain.model.Project;
 
 /**
@@ -12,6 +11,6 @@ import org.kolmanfreecss.kftddtaskmanagement.domain.model.Project;
  */
 public interface ProjectRepositoryPort {
     
-    Project createProject(final ProjectDto projectDto);
+    Project createProject(final Project projectDto);
     
 }

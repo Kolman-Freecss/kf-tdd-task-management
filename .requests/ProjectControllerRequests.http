@@ -1,0 +1,15 @@
+POST http://localhost:8080/api/v1/project
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "First project",
+    "description": "First project description",
+    "startDate": "2024-09-14",
+    "endDate": "2024-09-14"
+}
+
+<> 2024-10-19T153325.201.json
+
+###
+

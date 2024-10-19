@@ -35,7 +35,7 @@ public class PerformanceAspect {
 
         String methodName = proceedingJoinPoint.getSignature().getName();
 
-        log.info("Execution of {} took {}ms",
+        log.info("PerformanceAspect -> Execution of {} took {}ms",
                 methodName,
                 TimeUnit.NANOSECONDS
                         .toMillis(endTime - startTime)
