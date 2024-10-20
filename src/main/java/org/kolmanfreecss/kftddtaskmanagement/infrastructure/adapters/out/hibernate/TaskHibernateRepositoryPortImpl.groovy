@@ -16,8 +16,13 @@ class TaskHibernateRepositoryPortImpl implements TaskRepositoryPort {
 
     private final TaskHibernateRepository taskHibernateRepository;
 
-    TaskHibernateRepositoryPortImpl(TaskHibernateRepository taskHibernateRepository) {
+    TaskHibernateRepositoryPortImpl(final TaskHibernateRepository taskHibernateRepository) {
         this.taskHibernateRepository = taskHibernateRepository;
+    }
+    
+    @Override
+    Task save(final Task task) {
+        return taskHibernateRepository.save(task) as Task;
     }
 
     @Override

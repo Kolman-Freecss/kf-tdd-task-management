@@ -23,4 +23,16 @@ class TaskDto {
 
     ProjectDto projectDto;
     
+    @Override
+    String toString() {
+        return "TaskDto{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", status='" + status + '\'' +
+                ", dueDate=" + dueDate +
+                ", projectDto=" + projectDto +
+                '}';
+    }
+    
 }

@@ -11,6 +11,8 @@ import org.kolmanfreecss.kftddtaskmanagement.domain.model.Task
  */
 interface TaskRepositoryPort {
     
+    Task save(final Task task);
+    
     Set<Task> getAll();
     
 }

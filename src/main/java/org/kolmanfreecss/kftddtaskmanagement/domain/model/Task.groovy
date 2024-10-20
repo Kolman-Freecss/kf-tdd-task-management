@@ -1,16 +1,8 @@
 package org.kolmanfreecss.kftddtaskmanagement.domain.model
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.EnumType
-import jakarta.persistence.Enumerated
-import jakarta.persistence.FetchType
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import jakarta.persistence.JoinColumn
-import jakarta.persistence.ManyToOne
-import lombok.NoArgsConstructor
+
+import jakarta.persistence.*
+import lombok.ToString
 
 /**
  * Groovy class for Task (Groovy Just for fun)
@@ -19,7 +11,6 @@ import lombok.NoArgsConstructor
  * @version 1.0
  * @author Kolman-Freecss
  */
-@NoArgsConstructor
 @Entity
 class Task {
     
@@ -49,4 +40,26 @@ class Task {
     @JoinColumn(name = "project_id", nullable = false)
     Project project;
     
+    Task() {
+    }
+    
+    Task(final String title, final String description, final TaskStatus status, final Date dueDate, final Project project) {
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.dueDate = dueDate;
+        this.project = project;
+    }
+    
+    @Override
+    String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                ", dueDate=" + dueDate +
+                ", project=" + project +
+                '}';
+    }
 }

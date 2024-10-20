@@ -21,4 +21,16 @@ public record ProjectDto(
         Date endDate,
         Set<TaskDto> tasks
 ) {
+    
+    @Override
+    public String toString() {
+        return "ProjectDto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", tasks=" + tasks +
+                '}';
+    }
 }

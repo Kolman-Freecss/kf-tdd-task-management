@@ -35,10 +35,17 @@ public class Project {
     @Column(nullable = false)
     private Date startDate;
     
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Date endDate;
     
     @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Task> tasks = new HashSet<>();
+    
+    public Project(final String name, final String description, final Date startDate, final Date endDate) {
+        this.name = name;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
     
 }

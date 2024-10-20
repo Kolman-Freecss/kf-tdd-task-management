@@ -2,7 +2,6 @@ package org.kolmanfreecss.kftddtaskmanagement.infrastructure.adapters.out;
 
 import lombok.AllArgsConstructor;
 import org.kolmanfreecss.kftddtaskmanagement.application.ports.ProjectRepositoryPort;
-import org.kolmanfreecss.kftddtaskmanagement.domain.dto.ProjectDto;
 import org.kolmanfreecss.kftddtaskmanagement.domain.model.Project;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
